@@ -4,13 +4,6 @@
 ## Project Overview
 The purpose of this project is to obtain an understanding of the relationship between waste production and household income in Austin, TX. With Austin being a diverse city  growing on both ends of the rich-poor spectrum, our team wanted to determine if there is a correlation between higher income households and higher waste production in comparison to lower income homes. 
 
-## Resources
-The reliable resources used:
-- [Garbage and waste routes for City of Austin](https://data.austintexas.gov/Locations-and-Maps/Garbage-Routes/azhh-4hg8)
-- [Waste collection and diversion daily report](https://data.austintexas.gov/Utilities-and-City-Services/Waste-Collection-Diversion-Report-daily-/mbnu-4wq9) 
-- [Zip code boundaries for Austin](https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/export/?refine.state=TX&q=Austin)
-- [Household income by zip code](https://www.austintexas.gov/page/demographic-data)
-
 
 ## Process 
 - Created a [schema](https://github.com/TheLittlePrincess/Final_project/blob/main/screenshots/Initial_ETL.png) based on the data first gathered
@@ -41,6 +34,13 @@ The reliable resources used:
 - Github
 - JS
 - Html/CSS
+
+## Resources
+The reliable resources used:
+- [Garbage and waste routes for City of Austin](https://data.austintexas.gov/Locations-and-Maps/Garbage-Routes/azhh-4hg8)
+- [Waste collection and diversion daily report](https://data.austintexas.gov/Utilities-and-City-Services/Waste-Collection-Diversion-Report-daily-/mbnu-4wq9) 
+- [Zip code boundaries for Austin](https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/export/?refine.state=TX&q=Austin)
+- [Household income by zip code](https://www.austintexas.gov/page/demographic-data)
 
 ## Summary
 After completing our ETL process with reliable and concise data, we have consolidated our data into a table that contains data by zipcode, including the trash output along with income and population data. We were then able to upload that information into our database and train a first version of our model. 
