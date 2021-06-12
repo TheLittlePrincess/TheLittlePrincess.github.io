@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Analysis: Austin, TX </title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="py-3 bg-white">
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="basic-table.html">Page 2</a>
+        </nav>
+    </div>
+    <div class="jumbotron">
+        <h1 class="display-4">Who Makes the Most Trash?</h1>
+      </div>
+    <div class="container-fluid">
+        <div class="row">
+          </div>
+          <div class="col-md-8">
+            <p>
+                The purpose of this project is to obtain an understanding of the relationship between waste production and household income in Austin, TX. With Austin being a diverse city growing on both ends of the rich-poor spectrum, our team wanted to determine if there is a correlation between higher income households and higher waste production in comparison to lower income homes.
+
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-3">
+            <form class="py-3 bg-white">
+                <p>Prediction</p>
+                <ul class="y-3 bg-white">
+                    <li class="list-group-item bg-dark">
+                        <label for="ZIP">Zip Code</label>
+                        <input type="text" placeholder="78723" id="zipcode" />
+                    </li>
+                    <!-- This is for when we input the ML model -->
+                    <!-- <li class="y-3 bg-white">
+                        <label for="population">Population</label>
+                        <input type="text" placeholder="27900" id="int" />
+                    </li>
+                    <li class="y-3 bg-white">
+                        <label for="households">Households</label>
+                        <input type="text" placeholder="6520" id="int" />
+                    </li>
+                    <li class="y-3 bg-white">
+                        <label for="median income">Median Income</label>
+                        <input type="text" placeholder="69936" id="int" />
+                    </li>
+                    <li class="y-3 bg-white">
+                        <label for="mean income">Mean Income</label>
+                        <input type="text" placeholder="52819" id="int" />
+                    </li>
+                    <li class="y-3 bg-white">
+                        <label for="Housing Units">Housing Units</label>
+                        <input type="text" placeholder="7244" id="TOTAL_HOUSING_UNITS" />
+                    </li> -->
+                </ul>
+            </form>
+        </div>
+        <div class="col-md-9">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Zip Code</th>
+                        <th>Load Weight</th>
+                        <th>Population</th>
+                        <th>Number of Households</th>
+                        <th>Median Income</th>
+                        <th>Mean Income</th>
+                        <th>Number of Housing Units</th>
+                        </th>
+                    </tr> 
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script> -->
+<!-- <script src="static/js/data.js"></script> -->
+<script src="static/js/app.js"></script>
+</body>
+</html>
