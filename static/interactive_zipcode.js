@@ -1,4 +1,4 @@
-d3.json('./data.json').then((data) => {
+d3.json('./static/data.json').then((data) => {
   //console.log(data);
 tableData = data
 console.log(tableData);
@@ -13,7 +13,7 @@ tbody = d3.select("tbody")
   function createZipCodeDropDown() {
   zipSelector = d3.select("#zip-select"); //SELECT <select> WHERE PARTNER NAMES WILL APPEAR
 
-  d3.json('./zip_code_list.json').then((zipOptions) => { //READ IN JSON FILE COINTAING ALL PARTNER'S NAMES
+  d3.json('./static/zip_code_list.json').then((zipOptions) => { //READ IN JSON FILE COINTAING ALL PARTNER'S NAMES
       zipOptions.forEach((zip) => { //LOOP THROUGH PARTNER LIST TO CREATE INITAL DROP DOWN
           zipSelector
           .append('option')
