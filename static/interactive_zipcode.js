@@ -1,3 +1,49 @@
+//GET POPULATION ENTERED
+function getPopulation(){
+  x_dashboard = [];
+  var population = document.getElementById("population-input").value;
+  x_dashboard.push(population);
+  //console.log("population", population);
+ 
+
+  var households = document.getElementById("households-input").value;
+  x_dashboard.push(households);
+
+  //console.log("households", x_dashboard)
+
+  var median = document.getElementById("median-household-input").value;
+  x_dashboard.push(median);
+  //console.log("median", median);
+
+  var units = document.getElementById("total-housing-units-input").value;
+  x_dashboard.push(units);
+  //console.log("units", units);
+
+  
+
+  var popPerUnit = population/units;
+  x_dashboard.push(popPerUnit)
+
+  console.log("x_dashboard", x_dashboard)
+  console.log("type", typeof x_dashboard)
+
+  //DISPLAY OUTPUT, CURRENTLY DISPLAYING DATA THAT WILL GO INTO MODEL
+  document.getElementById("output").innerHTML = x_dashboard;
+  
+}
+
+//EVENT LISTENER TO GET USER POPULATION INPUT 
+document.getElementById("population-input").addEventListener("change", getPopulation);
+
+document.getElementById("households-input").addEventListener("change", getPopulation);
+
+document.getElementById("median-household-input").addEventListener("change", getPopulation);
+
+document.getElementById("total-housing-units-input").addEventListener("change", getPopulation);
+
+
+//CREATE TABLE
+
 d3.json('./static/data.json').then((data) => {
   //console.log(data);
 tableData = data
