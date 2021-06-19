@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Garbage Output by Zip Code: Austin, Texas</title>
-
-    <script src="https://d3js.org/d3.v5.min.js"></script> 
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+    <title>Prediction</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -17,37 +12,78 @@
       crossorigin="anonymous"
     />
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  </head>
-<body>
-  <div class="wrapper">
-<!--NAVIGATION BAR TO TOGGLE BETWEEN TABLE IMPORT AND SITE CURVES/TABLE-->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <a class="navbar-brand" href="team.html">Team</a>
-  <a class="navbar-brand" href="process.html">Process</a>
-</nav>
-  <!-- FILTERS HERE -->
-  <div class="row">
-  <div class="container-fluid pt-5">
-  <div class="col-md-2">
-    <div class="container-fluid pt-3" id="filters">
-      <div class="container-fluid pt-3"></div>
-      <form>
-        <h5>Zip Code Options</h5>
-        <ul class="list-group">
-          <li class="list-group-item">
-            <select id='zip-select'>
-              <option value="default">Select A Zip</option> 
-            </select>
-          </li>
-          <!-- <button id="clear-filter-btn" type="button" class="btn btn-primary">Clear Filter</button> -->
-        </ul>
-      </form>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="py-3 bg-white">
+    <div class="wrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="process.html">Process</a>
+            <a class="navbar-brand" href="team.html">Team</a>
+        </nav>
     </div>
+    <div class="jumbotron">
+        <h1 class="display-4">PREDICTION</h1>
+      </div>
+      <!-- USER INPUT HERE -->
+  <div class="container-fluid pt-5" id="filters">
+    <h1>Enter the following numbers:</h1>
+      <div class="row"><br><br></div>
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-2">
+            <form>
+              <label for="fname">POPULATION:</label>
+              <input type="text" id="population-input" name="fname"><br><br>
+            </form>
+          </div>
+          <div class="col-md-2">
+            <form>
+              <label for="fname">HOUSEHOLDS:</label>
+              <input type="text" id="households-input" name="fname"><br><br>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <form>
+              <label for="fname">MEDIAN HOUSEHOLD INCOME:</label>
+              <input type="text" id="median-household-input" name="fname"><br><br>
+            </form>
+          </div>
+          <div class="col-md-3">
+            <form>
+              <label for="fname">TOTAL HOUSING UNITS</label>
+              <input type="text" id="total-housing-units-input" name="fname"><br><br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- OUTPUT HAPPENS HERE -->
+      <p id="output"></p>
   </div>
 </div>
+<!-- ZIP CODE SELECT HERE, WILL REMEVE FROMM FINAL CODE -->
+  <!-- <div class="row">
+    <div class="container-fluid pt-5">
+      <div class="col-md-2">
+        <div class="container-fluid pt-3" id="filters">
+          <div class="container-fluid pt-3"></div>
+          <form>
+            <h5>Zip Code Options</h5>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <select id='zip-select'>
+                  <option value="default">Select A Zip</option> 
+                </select>
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div> -->
 <!--TABULAR IMPORT HERE-->
-<div class="container-fluid pt-5">
+<!-- <div class="container-fluid pt-5">
   
     <div class="col-md-10">
     
@@ -66,10 +102,11 @@
       <tbody></tbody>
     </table>
   </div>
-</div>
+</div> -->
 
 </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="static/interactive_zipcode.js"></script>
 </body>
 </html>
