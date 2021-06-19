@@ -2,30 +2,44 @@
 function getPopulation(){
   x_dashboard = [];
   var population = document.getElementById("population-input").value;
-  x_dashboard.push(population);
+  if (population){
+    x_dashboard.push(population);
+  }
   //console.log("population", population);
  
 
   var households = document.getElementById("households-input").value;
-  x_dashboard.push(households);
-
+  if (households){
+    x_dashboard.push(households);
+  }
   //console.log("households", x_dashboard)
 
   var median = document.getElementById("median-household-input").value;
-  x_dashboard.push(median);
+  if (median){
+    x_dashboard.push(median);
+  }
   //console.log("median", median);
 
   var units = document.getElementById("total-housing-units-input").value;
-  x_dashboard.push(units);
+  if (units){
+    x_dashboard.push(units);
+  }
   //console.log("units", units);
 
   
 
-  var popPerUnit = population/units;
-  x_dashboard.push(popPerUnit)
+  // var popPerUnit = population/units;
+  // x_dashboard.push(popPerUnit)
 
-  console.log("x_dashboard", x_dashboard)
-  console.log("type", typeof x_dashboard)
+  // console.log("x_dashboard", x_dashboard);
+  console.log("type", typeof x_dashboard);
+
+  console.log(x_dashboard.length);
+  if (x_dashboard.length === 4){
+    // Set result to var
+    var binned = score(x_dashboard);
+    console.log(binned);
+  }
 
   //DISPLAY OUTPUT, CURRENTLY DISPLAYING DATA THAT WILL GO INTO MODEL
   document.getElementById("output").innerHTML = x_dashboard;
@@ -44,36 +58,36 @@ document.getElementById("total-housing-units-input").addEventListener("change", 
 
 //CREATE TABLE
 
-d3.json('./static/data.json').then((data) => {
-  //console.log(data);
-tableData = data
-console.log(tableData);
+// d3.json('./static/data.json').then((data) => {
+//     //console.log(data);
+//   tableData = data
+//   console.log(tableData);
 
 
-//global declaration of tbody, since it will be accessed in and out of functions
-tbody = d3.select("tbody")
-
-
-
-
-  function createZipCodeDropDown() {
-  zipSelector = d3.select("#zip-select"); //SELECT <select> WHERE PARTNER NAMES WILL APPEAR
-
-  d3.json('./static/zip_code_list.json').then((zipOptions) => { //READ IN JSON FILE COINTAING ALL PARTNER'S NAMES
-      zipOptions.forEach((zip) => { //LOOP THROUGH PARTNER LIST TO CREATE INITAL DROP DOWN
-          zipSelector
-          .append('option')
-          .text(zip)
-          .property('Value', zip);
-      })
-  })
-}; //END OF createZipCodeDropDown()
-
-createZipCodeDropDown();
+//   //global declaration of tbody, since it will be accessed in and out of functions
+//   tbody = d3.select("tbody")
 
 
 
-});
+
+//     function createZipCodeDropDown() {
+//     zipSelector = d3.select("#zip-select"); //SELECT <select> WHERE PARTNER NAMES WILL APPEAR
+
+//     d3.json('./static/zip_code_list.json').then((zipOptions) => { //READ IN JSON FILE COINTAING ALL PARTNER'S NAMES
+//         zipOptions.forEach((zip) => { //LOOP THROUGH PARTNER LIST TO CREATE INITAL DROP DOWN
+//             zipSelector
+//             .append('option')
+//             .text(zip)
+//             .property('Value', zip);
+//         })
+//     })
+//   }; //END OF createZipCodeDropDown()
+
+// // createZipCodeDropDown();
+
+
+
+// });
 
 
 //START OF FUNCTION TO FILTER DATA//
