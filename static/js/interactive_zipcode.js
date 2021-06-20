@@ -36,9 +36,7 @@ function getPopulation(){
   //DISPLAY OUTPUT
 
 
-  // document.getElementById("output").innerHTML = x_dashboard;
-  // console.log("x_dashboard", x_dashboard);
-  // console.log("type", typeof x_dashboard);
+
 
   console.log(x_dashboard.length);
   if (x_dashboard.length === 4){
@@ -47,6 +45,10 @@ function getPopulation(){
     console.log(binned);
   }  
 };
+
+  document.getElementById("output").innerHTML = binned;
+  // console.log("x_dashboard", x_dashboard);
+  // console.log("type", typeof x_dashboard);
 
 // Logic: binned returns an array like this: [x,y,z]
 // If binned returns [x,y,z] where x>y and x>z, then return low
