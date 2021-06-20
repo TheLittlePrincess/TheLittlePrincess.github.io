@@ -46,7 +46,7 @@ function getPopulation(){
   }  
 };
 
-  document.getElementById("output").innerHTML = binned;
+  
   // console.log("x_dashboard", x_dashboard);
   // console.log("type", typeof x_dashboard);
 
@@ -75,6 +75,10 @@ document.getElementById("households-input").addEventListener("change", getPopula
 document.getElementById("median-household-input").addEventListener("change", getPopulation);
 
 document.getElementById("total-housing-units-input").addEventListener("change", getPopulation);
+
+//DISPLAY OUTOUT
+
+document.getElementById("output").innerHTML = binned;
 
 
 //CREATE TABLE
