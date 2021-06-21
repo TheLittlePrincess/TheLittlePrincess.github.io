@@ -29,46 +29,60 @@
           </div>
           <div class="col-md-8">
             <p>
-                    <h2 class="code-line" data-line-start=7 data-line-end=8 ><a id="Process_7"></a>ETL & Machine Learning Modeling</h2>
+                <h1 class="code-line" data-line-start=0 data-line-end=1 ><a id="Data_Visualization_Bootcamp_Final_Project_0"></a>Data Visualization Bootcamp Final Project</h1>
+                <h2 class="code-line" data-line-start=2 data-line-end=3 ><a id="Project_Overview_2"></a>[Project Overview]</h2>
+                <p class="has-line-data" data-line-start="3" data-line-end="4">The purpose of this project is to obtain an understanding of the relationship between waste production and household income in Austin, TX. With Austin being a diverse city  growing on both ends of the rich-poor spectrum, our team wanted to determine if there is a correlation between higher income households and higher waste production in comparison to lower income homes.</p>
+                <h2 class="code-line" data-line-start=5 data-line-end=6 ><a id="Process_5"></a>Process</h2>
                     <ul>
-                        <li class="has-line-data" data-line-start="8" data-line-end="9">Created a <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/screenshots/Initial_ETL.png">schema</a> based on the data first gathered</li>
-                        <li class="has-line-data" data-line-start="9" data-line-end="10">Created a Database  in AWS</li>
-                        <li class="has-line-data" data-line-start="10" data-line-end="11">Created the tables in pgAdmin based on the QuickDBD <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/Initial_ETL.sql">sql</a> export</li>
-                        <li class="has-line-data" data-line-start="11" data-line-end="12">Consolidated the zip code and income data into a single <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/full_zip_codes.csv">file</a></li>
-                        <li class="has-line-data" data-line-start="12" data-line-end="13"><a href="https://github.com/TheLittlePrincess/Final_project/blob/main/waste_data_etl.ipynb">Cleaned</a> the waste collection data and filtered to only utilize the 2017 data</li>
-                        <li class="has-line-data" data-line-start="13" data-line-end="14">We filtered and merged the garbage and waste route data into the <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/routes_2017_weight.csv">Routes_2017_weight data</a>  - now we have the waste weight per route</li>
-                        <li class="has-line-data" data-line-start="14" data-line-end="15">We sampled pairs of zip codes and routes <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/old_files/Preliminary_zip_route_weight.csv">Preliminary_zip_route_weight.csv</a> in order to append household income data to have a preliminary dataset to run our machine learning model</li>
-                        <li class="has-line-data" data-line-start="15" data-line-end="16">During week one, we used the extracted sample data to create a linear regression <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/old_files/ML_rough_model.ipynb">model</a> in order to complete a predictive analysis and to show the relationship between the variables of income and waste output</li>
-                        <li class="has-line-data" data-line-start="16" data-line-end="17">Once found which zipcode each route belongs to, we <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/routes_with_zips_joined_loads_dem.ipynb">aggregated</a> the waste weight per route per zipcode, and extracted what became the source <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/zips_load_demographics.csv">data</a> (zips_load_demographics) that includes the total trash output, median income, household units, and population by zipcode</li>
-                        <li class="has-line-data" data-line-start="17" data-line-end="18">Such source data was uploaded into our <a href="https://github.com/TheLittlePrincess/Final_project/blob/Database/ML_rough_model_Week2.ipynb">database</a> to feed our model</li>
-                        <li class="has-line-data" data-line-start="18" data-line-end="19">We then split our dataset into training/testing randomly</li>
-                        <li class="has-line-data" data-line-start="19" data-line-end="20">Through the first iteration of the  <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/ML_rough_model_Week2.ipynb">model</a> we concluded that there is a linear relationship when it comes to <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/Trash%20output%20vs%20Population.png">population</a> but <a href="https://github.com/TheLittlePrincess/Final_project/blob/main/Trash%20output%20vs%20Median%20income.png">normal</a> when it comes to income</li>
-                        <li class="has-line-data" data-line-start="20" data-line-end="21">From such output we’ve started toying with PCA (Principal Component Analysis) as a better alternative since it will allow us to determine what is/are the most relevant factor(s) when it comes to trash output</li>
-                        <li class="has-line-data" data-line-start="21" data-line-end="23">Also we applied K-Nearest Neighbor </li>
-                        <li class="has-line-data" data-line-start="23" data-line-end="24">Selected Github pages as our option for the dashboard </li>
-                        
-                    <h2 class="code-line" data-line-start=25 data-line-end=26 ><a id="Tools_25"></a>Tools</h2>
-                    <ul>
-                        <li class="has-line-data" data-line-start="26" data-line-end="27">Excel</li>
-                        <li class="has-line-data" data-line-start="27" data-line-end="28">Jupyter Notebook</li>
-                        <li class="has-line-data" data-line-start="28" data-line-end="29">PgAdmin4</li>
-                        <li class="has-line-data" data-line-start="29" data-line-end="30">AWS</li>
-                        <li class="has-line-data" data-line-start="30" data-line-end="31">Tableau</li>
-                        <li class="has-line-data" data-line-start="31" data-line-end="32">SQL</li>
-                        <li class="has-line-data" data-line-start="32" data-line-end="33">Matplotlib</li>
-                        <li class="has-line-data" data-line-start="33" data-line-end="34">Github</li>
-                        <li class="has-line-data" data-line-start="34" data-line-end="35">JS</li>
-                        <li class="has-line-data" data-line-start="35" data-line-end="37">Html/CSS</li>
+                    <li class="has-line-data" data-line-start="6" data-line-end="7">Created a schema based on the data first gathered</li>
+                    <li class="has-line-data" data-line-start="7" data-line-end="8">Created a Database  in AWS</li>
+                    <li class="has-line-data" data-line-start="8" data-line-end="9">Created tables in pgAdmin based on the QuickDBD sql export</li>
+                    <li class="has-line-data" data-line-start="9" data-line-end="10">Consolidated the zip code and income data into a single file</li>
+                    <li class="has-line-data" data-line-start="10" data-line-end="11">Cleaned and filtered the waste collection data to only utilize 2017 data</li>
+                    <li class="has-line-data" data-line-start="11" data-line-end="12">We filtered and merged the garbage and waste route data into the Routes_2017_weight_data file, to obtain the waste weight per route</li>
+                    <li class="has-line-data" data-line-start="12" data-line-end="13">We sampled pairs of zip codes and routes, Preliminary_zip_route_weight.csv, in order to append household income data to have a preliminary dataset to run our machine learning model</li>
+                    <li class="has-line-data" data-line-start="13" data-line-end="14">Once found which zipcode each route belongs to, we aggregated the waste weight per route per zipcode, and extracted what became the source data</li>
+                    <li class="has-line-data" data-line-start="14" data-line-end="15">Created a file that includes the total trash output, median income, household units, and population by zipcode (zips_load_demographics)</li>
+                    <li class="has-line-data" data-line-start="15" data-line-end="16">Source data was then uploaded into our database to feed our model</li>
+                    <li class="has-line-data" data-line-start="16" data-line-end="17">Split our dataset randomly into training/testing</li>
+                    <li class="has-line-data" data-line-start="17" data-line-end="18">Through the first iteration of the model we concluded that there is a linear relationship when it comes to population but normal when it comes to income</li>
+                    <li class="has-line-data" data-line-start="18" data-line-end="19">Due to results we started toying with PCA (Principal Component Analysis) as an alternative since it would allow us to determine what is/are the most relevant factor(s) when it comes to trash output. However we later realize it didn’t add any accuracy and only complexity when it came to connecting to the dashboard</li>
+                    <li class="has-line-data" data-line-start="19" data-line-end="20">Draw a set of wireframes to base the design of the dashboard site</li>
+                    <li class="has-line-data" data-line-start="20" data-line-end="21">Applied K-nearest-neighbors method to the machine learning model, kept predicted outputs as continuous values</li>
+                    <li class="has-line-data" data-line-start="21" data-line-end="22">Performed random forest method on machine learning model, binned the trash outputs into “low”, “medium”, and “high” to turn the predicted outputs into categorical values to see if this improves model’s accuracy score.</li>
+                    <li class="has-line-data" data-line-start="22" data-line-end="23">Calculated mean absolute error and percent error on k-nearest-neighbors method to analyze performance</li>
+                    <li class="has-line-data" data-line-start="23" data-line-end="24">Calculated accuracy score on random forest method after changing outputs to categorical values to analyze model performance</li>
+                    <li class="has-line-data" data-line-start="24" data-line-end="25">Selected Github pages as our option to deploy the dashboard</li>
+                    <li class="has-line-data" data-line-start="25" data-line-end="26">Included a tab for interacting with the model (home), one for the process and one for the team</li>
+                    <li class="has-line-data" data-line-start="26" data-line-end="27">Used m2cgen to translate the model to JS so it could be connected to the dashboard</li>
+                    <li class="has-line-data" data-line-start="27" data-line-end="28">Completed the dashboard so it is able to predict based on the data entered wheather is a low, medium or high trash producer based on the input data</li>
+                    <li class="has-line-data" data-line-start="28" data-line-end="30">Completed the <a href="https://docs.google.com/presentation/d/1ff6geuibB3INIdmVZ1MCOf6o9UUcdfSww27aJYee5uw/edit?ts=60a28a65#slide=id.gddfcfba4d3_0_13">presentation</a> along with the speaker notes</li>
                     </ul>
-                      
-                    <h2 class="code-line" data-line-start=37 data-line-end=38 ><a id="Resources_37"></a>Resources</h2>
-                    <p class="has-line-data" data-line-start="38" data-line-end="39">The reliable resources used:</p>
-                        <ul>
-                        <li class="has-line-data" data-line-start="39" data-line-end="40"><a href="https://data.austintexas.gov/Locations-and-Maps/Garbage-Routes/azhh-4hg8">Garbage and waste routes for City of Austin</a></li>
-                        <li class="has-line-data" data-line-start="40" data-line-end="41"><a href="https://data.austintexas.gov/Utilities-and-City-Services/Waste-Collection-Diversion-Report-daily-/mbnu-4wq9">Waste collection and diversion daily report</a></li>
-                        <li class="has-line-data" data-line-start="41" data-line-end="42"><a href="https://public.opendatasoft.com/explore/dataset/us-zip-code-latitude-and-longitude/export/?refine.state=TX&amp;q=Austin">Zip code boundaries for Austin</a></li>
-                        <li class="has-line-data" data-line-start="42" data-line-end="44"><a href="https://www.austintexas.gov/page/demographic-data">Household income by zip code</a></li>
-                        </ul>
+                <h2 class="code-line" data-line-start=30 data-line-end=31 ><a id="Resources_30"></a>Resources</h2>
+                <p class="has-line-data" data-line-start="31" data-line-end="32">Resources:</p>
+                    <ul>
+                    <li class="has-line-data" data-line-start="32" data-line-end="33"><a href="https://data.austintexas.gov/Locations-and-Maps/Garbage-Routes/azhh-4hg8">Garbage and waste routes for City of Austin</a></li>
+                    <li class="has-line-data" data-line-start="33" data-line-end="34"><a href="https://data.austintexas.gov/Utilities-and-City-Services/Waste-Collection-Diversion-Report-daily-/mbnu-4wq9">Waste collection and diversion daily report</a></li>
+                    <li class="has-line-data" data-line-start="34" data-line-end="35"><a href="https://openaustin.carto.com/u/oa-admin/tables/austin_area_zip_codes/public">Zip code boundaries for Austin</a></li>
+                    <li class="has-line-data" data-line-start="35" data-line-end="37"><a href="https://www.austintexas.gov/page/demographic-data">Household income by zip code</a></li>
+                    </ul>
+                <h2 class="code-line" data-line-start=37 data-line-end=38 ><a id="Tools_37"></a>Tools</h2>
+                <p class="has-line-data" data-line-start="38" data-line-end="39">We had the opportunity to use multiple tools and languages, like</p>
+                    <ul>
+                    <li class="has-line-data" data-line-start="39" data-line-end="40">Excel</li>
+                    <li class="has-line-data" data-line-start="40" data-line-end="41">Visual Studio</li>
+                    <li class="has-line-data" data-line-start="41" data-line-end="42">Jupyter &amp; Colab notebooks</li>
+                    <li class="has-line-data" data-line-start="42" data-line-end="43">Python</li>
+                    <li class="has-line-data" data-line-start="43" data-line-end="44">Pandas</li>
+                    <li class="has-line-data" data-line-start="44" data-line-end="45">PgAdmin4</li>
+                    <li class="has-line-data" data-line-start="45" data-line-end="46">AWS</li>
+                    <li class="has-line-data" data-line-start="46" data-line-end="47">Tableau</li>
+                    <li class="has-line-data" data-line-start="47" data-line-end="48">SQL</li>
+                    <li class="has-line-data" data-line-start="48" data-line-end="49">Matplotlib</li>
+                    <li class="has-line-data" data-line-start="49" data-line-end="50">html/ccs</li>
+                    <li class="has-line-data" data-line-start="50" data-line-end="51">Java</li>
+                    </ul>           
+   
                     <h2 class="code-line" data-line-start=44 data-line-end=45 ><a id="Summary_44"></a>Considerations</h2>
                     <p class="has-line-data" data-line-start="45" data-line-end="47">The Model is likely to be undefed given that only 37 entries were used.</p>
 
